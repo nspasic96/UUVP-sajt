@@ -1,0 +1,10 @@
+ul{
+	list-style-type: none;
+}
+.vezbe li a{
+	text-decoration: none;
+	color: black;
+}
+.vezbe li a:hover{
+	background: white;
+}

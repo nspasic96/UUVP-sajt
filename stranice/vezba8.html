@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<form id="form" action="script.php" method="get">
+		<ul>
+			<li><label for="name">Name: </label><input type="text" name="name" id="name" required pattern="[a-z]{3}[0-9]{3}"></li>
+			<li><label for="number">Number: </label><input type="number" name="number" id="number" value="10" min="1" max="15"></li>
+			<li><label for="number2">Number2: </label><input type="number" name="number2" id="number2" value="50" min="0" max="100" step="10"></li>
+			<li><label for="range">Range: </label><input type="range" name="rangeexample" id="rangeexample" value="10" min="0" max="100">
+				<output onforminput="value=rangeexample.value" for="rangeexample"></output></li>
+			<li><label for="date">Date: </label><input type="date" name="date" id="date" > </li>
+			<li><label for="time" >Time: </label><input type="time" name="time" id="time" ></li>
+			<li><label for="search">Search: </label><input type="search" name="search" id="search" placeholder="Search..." autofocus></li>
+			<li><label for="color">Color: </label><input type="color" name="color" id="color" > </li>
+			<li><label for="data">Title: </label>
+				<input type="text" list="mydata" name="data" id="data">
+					<datalist id="mydata">
+						<option label="Mr" value="Mister">
+						<option label="Mrs" value="Mistress">
+						<option label="Ms" value="Miss">
+					</datalist>
+			</li>
+		</ul>
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>

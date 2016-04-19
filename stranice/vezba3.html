@@ -1,0 +1,55 @@
+<html lang="sr-Latn">
+<META http-equiv="content-type" content="text/html; charset=windows-1250">
+    <head>
+        <title>Zadaci iz programiraja</title>
+    </head>
+    <body style="background-color:lightgrey;">
+        
+        <h1 style="text-align:center">
+            Programski jezik C: Razni zadaci
+        </h1>
+		
+		<ol>
+			<li>
+			Napisati na programskom jeziku C program za računanje faktorijela prirodog broja, na osnovu formule
+			<p style="text-align: center;">
+			<var>n</var>! = 1 &middot; 2 &middot; &hellip; &middot; <var>n</var>
+			</p>
+			<pre>
+			<code>
+long fact(int n)
+{
+	if (n == 1) return 1;
+	else return n * fact(n - 1);
+}
+			</code>
+			</pre>
+			<em>Poziv: </em> 
+			<pre>
+			<code>
+void main()
+{
+	for (int i = 1; i < 9; i++) {
+		printf("%ld\n", fact(i));
+	}
+}
+			</code>
+			</pre>
+			<em>Izlaz: </em> 
+			<pre>
+			<samp>
+1
+2
+6
+24
+120
+720
+5040
+40320
+Press any key to continue . . .
+			</samp>
+			</pre>
+			</li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    p {
+        margin: 40px;
+        font-size: 24px;
+        font-family: serif;
+        color: #aaaaaa;
+        font-style: italic;
+    }
+    p:before {
+        content: "Once upon a time ";
+    }
+    p:after {
+        content: " and lived happily ever after. ";
+    }
+	
+    li:nth-child(odd) { color: blue; }
+    li:nth-child(even) { color: red; }
+    
+    span {  background-image: url('../slike/lady2.png');
+            width: 105px;
+            height: 220px;
+            float: left;
+            background-position: -10px -10px;
+            margin-left: -10px;
+    }
+    
+    div span:first-child {
+        background-image: url('../slike/lady1.png');
+    }
+    
+    div span:last-child {
+        background-image: url('../slike/lady3.png');
+    }
+</style>
+</head>
+
+<body>
+<p>a princess was locked in the tower...she escaped</p>
+<p>you learned to code with PMF and got a good grade</p>
+
+<h1>Odd Or Even</h1>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+<ul>
+
+
+<div class="postOfficeQueue">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</body>
+
+</html>

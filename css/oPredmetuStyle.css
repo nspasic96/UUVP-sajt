@@ -1,0 +1,23 @@
+.description{
+	height: 96%;
+	width: 96%;
+	background: green;
+	border-radius: 20px;
+	padding: 2%;
+}
+.left, .right{
+	position: relative;
+	width: 46%;
+	margin: 1%;
+	float: left;
+	background: yellow;
+	border-radius: 20px;
+	padding: 1%;
+	height: 100%;
+}
+.row{
+	height: 100%;
+}
+h3{
+	text-align: center;
+}

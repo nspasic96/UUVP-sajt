@@ -1,0 +1,58 @@
+body, nav ul li a:hover{
+	background: #e44432;
+}
+nav ul {    
+    padding:0;
+    font-size:0.9em;
+    color:#3366cc;
+    list-style-type: none;
+    overflow:hidden;
+    width: 100%;
+}
+nav a{
+	display: block;
+}
+nav ul li a{
+	position: relative;
+	text-decoration: none;
+	height: 35px;
+	margin-top: 5px;
+	width: 100%;	
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	padding-top: 2px; 
+}
+nav ul li {
+	width: 17%;
+	float:left;
+	text-align: center;
+	padding: 0 1%;
+	height: 15px;
+	background: #ccc;
+	height: 40px;
+	margin-right: 0.5%;
+	margin-left: 0.5%;
+	border-radius: 20px; 
+}
+/*nav{
+	border-radius: 20px;
+}*/
+.footer{
+	text-decoration-color: white;
+	background: black;
+	color: white;
+	text-align: center;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	margin-left: -9px;
+}
+.contentIndex{
+	width: 90%;
+	margin: 5%;
+	background: yellow;
+	border-radius: 20px;
+	padding: 5px;
+
+}
+
