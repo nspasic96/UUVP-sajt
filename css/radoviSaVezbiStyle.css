@@ -1,10 +1,16 @@
 ul{
 	list-style-type: none;
 }
+li{
+	width: 100%;
+	margin :10px;
+}
 .vezbe li a{
 	text-decoration: none;
 	color: black;
+	padding: 5px;
 }
 .vezbe li a:hover{
 	background: white;
+	width: 100%;
 }

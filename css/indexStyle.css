@@ -1,5 +1,5 @@
 body, nav ul li a:hover{
-	background: #e44432;
+	background: #ECB316;
 }
 nav ul {    
     padding:0;
@@ -50,9 +50,9 @@ nav ul li {
 .contentIndex{
 	width: 90%;
 	margin: 5%;
-	background: yellow;
+	background: #FFCCE5;
 	border-radius: 20px;
 	padding: 5px;
-
+	box-shadow: 7px 7px;
 }
 
