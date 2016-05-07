@@ -2,7 +2,7 @@ body{
 	background-image :url("../slike/background.jpg");
 }
 nav ul li a:hover{
-	background: transparent;
+	display: hidden;
 }
 nav ul {    
     padding:0;

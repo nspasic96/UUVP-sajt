@@ -23,7 +23,7 @@
                   <h1> Studenti generacije 2015/16 </h1>
 
                   <a href="../../../stranice/11" target="_blank">
-                  <img src="../../../showimage.php?id=3546" class="studentslika" onmouseover="onMouseOverZoom(this)" onmouseout="onMouseOutUnzoom(this)" title="Nikola Pavlovic"></a> 
+                  <img src="../../../showimage.php?id=3546" class="studentslika" title="Nikola Pavlovic"></a> 
                         
              	<a href="../../../stranice/22" target="_blank">
                   <img src="../../../showimage.php?id=3557" class="studentslika" onmouseover="onMouseOverZoom(this)" onmouseout="onMouseOutUnzoom(this)" title="Saša Đorđević"></a> 
@@ -188,7 +188,30 @@
                   <img src="../../../showimage.php?id=3622" class="studentslika" onmouseover="onMouseOverZoom(this)" onmouseout="onMouseOutUnzoom(this)" title="Danijela Pavlović"></a> 
                         
             	<a href="../../../stranice/88" target="_blank">
-                  <img src="../../../showimage.php?id=3623" class="studentslika" onmouseover="onMouseOverZoom(this)" onmouseout="onMouseOutUnzoom(this)" title="Nenad Prokić"></a>  		
+                  <img src="../../../showimage.php?id=3623" class="studentslika" onmouseover="onMouseOverZoom(this)" onmouseout="onMouseOutUnzoom(this)" title="Nenad Prokić"></a>
+
+                  <script type="text/javascript">
+                        var a=document.createElement("a");
+                        var img=document.createElement("img");
+                        img.src=nizStudenata[0].srcStranice;
+                        img.className=nizStudenata[0].klasa;
+                        img.title=nizStudenata[0].fullName;
+                        a.href=nizStudenata[0].srcSlike;
+                        a.target="_blank";
+                        a.appendChild(img);
+                        document.body.appendChild(a);
+                        slikeEventi = document.getElementsByClassName('studentslika');
+                        for (var i = 0; i < 56; i++) {
+                        slikeEventi[i].addEventListener('mouseover',function (){
+                        this.style.width = (100).toString()+"px";
+                        this.style.height = (100).toString()+"px";
+                        });
+                        slikeEventi[i].addEventListener('mouseout',function (){
+                        this.style.width = (50).toString()+"px";
+                        this.style.height = (50).toString()+"px";
+                        });
+                        }
+                  </script>
             </div>
             <p>
                   Klik na sliku studenta odvešće vas na njegovu stranicu.
