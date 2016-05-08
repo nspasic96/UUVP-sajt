@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="UTF8">
+	<title></title>
+      <link rel="stylesheet" type="text/css" href="../css/indexStyle.css">
+      <link rel="stylesheet" type="text/css" href="../css/mojeGlasanjeStyle.css">
+      <script type="text/javascript" src="../js/mojeGlasanje.js"></script>
+      <script type="text/javascript" src="../js/studenti.js"></script>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html">Početna</a></li>
+			<li><a href="oMeni.html">O meni</a></li>
+			<li><a href="radoviSaVezbi.html">Radovi sa vežbi</a></li>			
+	        <li><a href="studenti.html">Studenti</a></li>
+			<li><a href="http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
+			<li><a href="oPredmetu.html">O predmetu</a></li>
+	        <li><a href="potapanjeBrodova.html">Potapanje brodova</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		<h1> Glasanje za najbolji sajt </h1>
+		<p>
+			Ova stranica je u pripremi i njena trenutna funkcionalsnost je napravljena za potrebe
+			drugog domaceg zadatka. Trenutno su dodeljeni poeni od 1 do 5 za sajtove drugih studenata
+			kao vrednosti polja u nizu studenata i izlistano trenutno stanje. Kasnije bi trebalo da se omoguci svakom studentu koj poseti ovu stranicu da glasa za sajt koji mu se najvise svidja. Vazno je jos napomenuti da ovo glasanje nema nikakve veze sa pravim glasanjem na serveru za najbolji sajt. Ova stranica je samo za vezbu!
+		</p>
+		<div id="top3">
+
+		</div>
+		<script type="text/javascript">
+			var niz = razdeliGlasoveRandomIVratiBodovaneStudente();
+			var idovi = document.getElementById('top3');
+			prikazi3Najbolja();
+		</script>
+
+	</div>
+	<div class="footer">
+		&#169; 2016 Nikola Spasić. All rights reserved.
+	</div>
+</body>
+</html>

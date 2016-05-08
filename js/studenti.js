@@ -1,3 +1,57 @@
+function getUrlParameters(){
+	var params=[
+		{
+			key: "page",
+			value: 1
+		},
+		{
+			key: "npp",
+			value: 3
+		}
+	];
+	var url=window.location.href;
+	var page=1;
+	var npp=3;
+	if(url.match(/page=([0-9]+)/)){
+		page=url.match(/page=([0-9]+)/)[0].split('=')[1];
+	}		
+	if(url.match(/npp=([0-9]+)/)){
+		npp=url.match(/npp=([0-9]+)/)[0].split('=')[1];
+	}	
+	params[0].value=page;
+	params[1].value=npp;
+	return params;
+
+	// var s="parametri su "; 
+	// s+="page="+page;
+	// s+=" npp="+npp;
+ //    window.alert(s);
+}
+function displayPages(){
+	var stranice = document.getElementById('stranice');
+    var params = getUrlParameters();
+	for(var i=1; i<= (Math.ceil(nizStudenata.length/Number(params[1].value))); i++){
+		var a = document.createElement('a'); 
+		var pageNum = document.createTextNode(String(i));
+		a.appendChild(pageNum);
+		a.href="?page="+String(i)+"&npp="+String(params[1].value);  
+		stranice.appendChild(a);   
+	}
+}
+
+function displayPage(pageNum,numberPerPage){
+	for(var i=(pageNum-1)*numberPerPage; i<pageNum*numberPerPage && i<nizStudenata.length; i++){
+		var a=document.createElement("a");
+		var img=document.createElement("img");
+		img.src=nizStudenata[i].srcStranice;
+		img.className=nizStudenata[i].klasa;
+		img.title=nizStudenata[i].fullName;
+		a.href=nizStudenata[i].srcSlike;
+		a.target="_blank";
+		a.appendChild(img);
+		studentsContainer.appendChild(a);
+	}
+}
 var nizStudenata = [
 	{
 		id:11,
