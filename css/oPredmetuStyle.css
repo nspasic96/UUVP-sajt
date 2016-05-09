@@ -21,3 +21,15 @@
 h3{
 	text-align: center;
 }
+.html{
+	background-image :url("../slike/htmlb.png");
+}
+.css{
+	background-image :url("../slike/css.jpe");
+}
+.javascript{
+	background-image :url("../slike/javascript.jpe");
+}
+.php{
+	background-image :url("../slike/php.jpe");
+}

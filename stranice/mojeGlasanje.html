@@ -28,12 +28,24 @@
 			kao vrednosti polja u nizu studenata i izlistano trenutno stanje. Kasnije bi trebalo da se omoguci svakom studentu koj poseti ovu stranicu da glasa za sajt koji mu se najvise svidja. Vazno je jos napomenuti da ovo glasanje nema nikakve veze sa pravim glasanjem na serveru za najbolji sajt. Ova stranica je samo za vezbu!
 		</p>
 		<div id="top3">
-
+			<div id="silver"><h3>Drugo mesto</h3></div>
+			<div id="gold"><h3>Prvo mesto</h3></div>
+			<div id="bronze"><h3>Trece mesto</h3></div>
 		</div>
 		<script type="text/javascript">
 			var niz = razdeliGlasoveRandomIVratiBodovaneStudente();
-			var idovi = document.getElementById('top3');
 			prikazi3Najbolja();
+			slikeEventi = document.getElementsByClassName('studentslika');
+            for (var i = 0; i < slikeEventi.length ; i++) {
+                  slikeEventi[i].addEventListener('mouseover',function (){
+                  this.style.width = (100).toString()+"px";
+                  this.style.height = (100).toString()+"px";
+                  });
+                  slikeEventi[i].addEventListener('mouseout',function (){
+                  this.style.width = (50).toString()+"px";
+                  this.style.height = (50).toString()+"px";
+                  });
+            }   
 		</script>
 
 	</div>

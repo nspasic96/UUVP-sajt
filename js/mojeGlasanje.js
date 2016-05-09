@@ -76,9 +76,13 @@ function prikazi3Najbolja(){
 	var top3 = [];
 	top3 = daj3Najbolja();
 	for(var i=0; i<3; i++){
-		var mesto=document.createTextNode(String(i+1) + ". mesto:");
-		top33= document.getElementById('top3');
-		top33.appendChild(mesto);
+		if(i==0){
+			top33 = document.getElementById('gold');
+		} else if(i==1){
+			top33 = document.getElementById('silver');			
+		} else {
+			top33 = document.getElementById('bronze');
+		}
 		for(var j=0; j<top3[i].length; j++){
 			var a=document.createElement("a");
 			var img=document.createElement("img");

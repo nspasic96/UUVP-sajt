@@ -31,11 +31,18 @@ function displayPages(){
 	var stranice = document.getElementById('stranice');
     var params = getUrlParameters();
 	for(var i=1; i<= (Math.ceil(nizStudenata.length/Number(params[1].value))); i++){
+		var div = document.createElement('div');
 		var a = document.createElement('a'); 
 		var pageNum = document.createTextNode(String(i));
 		a.appendChild(pageNum);
-		a.href="?page="+String(i)+"&npp="+String(params[1].value);  
-		stranice.appendChild(a);   
+		a.href="?page="+String(i)+"&npp="+String(params[1].value);
+		div.className="allPages";
+		if(params[0].value==i){
+			div.className+=" currentPage";
+		} 
+		div.appendChild(a); 
+		stranice.appendChild(div); 
+
 	}
 }
 
@@ -49,7 +56,7 @@ function displayPage(pageNum,numberPerPage){
 		a.href=nizStudenata[i].srcSlike;
 		a.target="_blank";
 		a.appendChild(img);
-		studentsContainer.appendChild(a);
+		students.appendChild(a);
 	}
 }
 var nizStudenata = [
@@ -82,6 +89,15 @@ for(var i=35; i<=88; i++){
 	student.fullName="Treba izvući puno ime sa stranice rezultati!";
 	nizStudenata.push(student);
 }
-
+// function addEvLis(item){
+// 	item.addEventListener('mouseover',function (){
+// 	this.style.width = (100).toString()+"px";
+// 	this.style.height = (100).toString()+"px";
+// 	});
+// 	item.addEventListener('mouseout',function (){
+// 	this.style.width = (50).toString()+"px";
+// 	this.style.height = (50).toString()+"px";
+// 	});
+// }
 
 

@@ -13,3 +13,52 @@ img{
 	height: 50px;
 	display: inline;
 }
+.allPages{
+	text-align: center;
+	width: 30px;
+	height: 20px;
+	display: inline-block;
+	background: white;
+	position: relative;
+	margin: 1px;
+}
+
+.currentPage{
+	background: blue;
+
+}
+#stranice {
+	position: relative;
+	width: 30%;
+	margin: auto;
+
+}
+#stranice a{
+	position: relative;
+	margin: 0px;
+	text-decoration: none;
+	padding-left: 11px;
+	padding-right: 11px;
+	padding-bottom: 2.67px;
+}
+#students{
+	position: relative;
+	width: 30%;
+	margin: auto;
+}
+#students a{
+	position: relative;
+	display: inline-block;
+}
+#strelice{
+	position: relative;
+	width: 30%;
+	margin: auto;
+	padding: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/*#stranice a:hover{
+	background: transparent;
+}*/

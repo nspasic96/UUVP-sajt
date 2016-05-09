@@ -22,9 +22,21 @@
 	<div class="content">
 		<div id="studentsContainer">
                   <h1> Studenti generacije 2015/16 </h1>
-                  <input type="text" id="npp">Koliko slika studenata zelite da vidite odjednom?</input>
+                  Koliko slika studenata zelite da vidite odjednom?<br>
+                  <div id="chooseNpp">
+                  <input type="text" id="npp"></input>
                   <input type="button" id="confirm" value="Potvrdi"></input>
-                  <div id="stranice"></div>
+                  </div>
+                  <div id="students"></div>
+                  <div id="stranice"></div>  
+                  <div id="strelice">
+                        <a href="" id="leva" class="strelica">
+                              <img src="../slike/leftArrowIcon.png" width="50px" height="50px" /> 
+                        </a> 
+                        <a href="" id="desna" class="strelica">         
+                        <img src="../slike/rightArrowIcon.png" width="50px" height="50px" />
+                        </a>
+                  </div>
                   <script type="text/javascript">
                         var confirm = document.getElementById('confirm');
                         confirm.addEventListener("click", function() {
@@ -32,27 +44,27 @@
                               if(isNaN(Number(n)) || n<=0){
                                     window.alert("Nevalidan unos!");
                               } else {
-                                    window.location = "http://www.rnserver.pmf.ni.ac.rs/stranice/36/stranice/studenti.html?page=1&npp="+n;
+                                    window.location = "studenti.html?page=1&npp="+n;
                                     // window.location = "file:///G:/GitRepositories/UUVP%20sajt/stranice/studenti.html?page=1&npp="+n;
                               }                            
                         });
                         var params = getUrlParameters();
                         displayPages();
                         displayPage(params[0].value,params[1].value);
-                        // var studentsContainer = document.getElementById("studentsContainer");
-                        // for(var i=0; i<nizStudenata.length; i++){
-                              // var a=document.createElement("a");
-                              // var img=document.createElement("img");
-                              // img.src=nizStudenata[i].srcStranice;
-                              // img.className=nizStudenata[i].klasa;
-                              // img.title=nizStudenata[i].fullName;
-                              // a.href=nizStudenata[i].srcSlike;
-                              // a.target="_blank";
-                              // a.appendChild(img);
-                              // studentsContainer.appendChild(a);
-                        // }
+                        var leftArrow = document.getElementById('leva');
+                        var rightArrow = document.getElementById('desna');
+                        if(params[0].value==1){
+                              leftArrow.style.display = "none";
+                        } else {
+                              leftArrow.href="studenti.html?page="+ String(params[0].value-1) +"&npp="+String(params[1].value);
+                        }
+                        if(params[0].value*params[1].value>=nizStudenata.length){
+                              rightArrow.style.display = "none";
+                        } else {
+                              rightArrow.href="studenti.html?page="+ String(Number(params[0].value)+1) +"&npp="+String(params[1].value);
+                        }
                         slikeEventi = document.getElementsByClassName('studentslika');
-                        for (var i = 0; i < nizStudenata.length; i++) {
+                        for (var i = 0; i < slikeEventi.length ; i++) {
                               slikeEventi[i].addEventListener('mouseover',function (){
                               this.style.width = (100).toString()+"px";
                               this.style.height = (100).toString()+"px";
