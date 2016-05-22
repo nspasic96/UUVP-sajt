@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script type="text/javascript" src="../js/script20.js">
+	</script>
+</head>
+<body>
+	<form>
+		<label>Square this number:
+		</label>
+			<input type="number" id="square-input" size="2">
+		<button id="square-button" type="button" >Calculate</button>
+		<br><br>
+	  
+		<label>Half this number:
+		</label>
+			<input type="number" id="half-input" size="2">
+		<button id="half-button" type="button">Calculate</button>
+		<br><br>
+	  
+		<label>Fraction:
+		</label>
+			<input type="number" id="percent1-input" size="2">
+		<label>Whole:
+		</label>
+			<input type="number" id="percent2-input" size="2">
+		<button id="percent-button" type="button">Calculate</button>
+		<br><br>
+	  
+		<label>Calculate area of circle with radius:
+		</label>
+			<input type="number" id="area-input" size="2">
+		<button id="area-button" type="button">Calculate</button> 
+		<br><br>	
+	</form>
+	
+	<div id="solution"></div>
+	
+	<script type="text/javascript">
+		var squareButton = document.getElementById("square-button");
+		squareButton.addEventListener("click", function() {
+		  var num = document.getElementById("square-input").value;
+		  document.getElementById("solution").innerHTML = squareNumber(num);
+		});
+			
+		var halfButton = document.getElementById("half-button");
+		halfButton.addEventListener("click", function() {
+		  var num = document.getElementById("half-input").value;
+		  document.getElementById("solution").innerHTML = halfOf(num);
+		});
+
+		var percentButton = document.getElementById("percent-button");
+		percentButton.addEventListener("click", function() {
+		  var num1 = document.getElementById("percent1-input").value;
+		  var num2 = document.getElementById("percent2-input").value;
+		  document.getElementById("solution").innerHTML = percentOf(num1, num2);
+		});
+			
+		var areaButton = document.getElementById("area-button");
+		areaButton.addEventListener("click", function() {
+		  var num = document.getElementById("area-input").value;
+		  document.getElementById("solution").innerHTML = areaOfCircle(num);
+		});
+	</script>
+</body>
+</html>

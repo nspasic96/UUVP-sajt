@@ -1,8 +1,6 @@
 .leftSide{
 	position: relative;
-	width: 24%;
 	float: left;
-	background: yellow;
 	padding: 2%;
 	margin:1%;
 	border-radius: 20px;
@@ -11,17 +9,15 @@
 
 .rightSide{
 	position: relative;
-	width: 64%;
 	float: left;
+	width: auto;
 	background: #aaa;
-	padding: 2%;
-	margin:1%;
 	border-radius: 20px;
-	height: 100%;
+	padding: 20px;
 }
 img{
 	position: relative;
-	width: 100%;
+	width: 300px;
 	height: 200px;
 }
 li img{
@@ -33,4 +29,7 @@ ul{
 }
 li{
 	display: inline;
+}
+table{
+	border:solid;
 }

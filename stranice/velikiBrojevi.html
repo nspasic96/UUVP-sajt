@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf8">
+	<link rel="stylesheet" type="text/css" href="../css/indexStyle.css">
+	<link rel="stylesheet" type="text/css" href="../css/velikiBrojevi.css">
+	<title>Mnozenje velikih brojeva</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="../index.html">Početna</a></li>
+			<li><a href="oMeni.html">O meni</a></li>
+			<li><a href="radoviSaVezbi.html">Radovi sa vežbi</a></li>			
+	        <li><a href="studenti.html">Studenti</a></li>
+			<li><a href="http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
+			<li><a href="oPredmetu.html">O predmetu</a></li>
+			<li><a href="mojeGlasanje.html">Glasanje</a></li>
+            <li><a href="kosiHitac.html">Animacija kosog hica</a></li>
+		</ul>
+	</nav>
+	<p>
+		U računaru brojevi se predstavljaju u binarnom obliku i postoje ograničenja za njihove vrednosti.
+		Na primer, u javascriptu tip broja "Number" može da uzme vrednosti u iz segmenta [5e-324,1.7976931348623157e+308]. Međutim, nekada je potrebno raditi sa mnogo većim(po apsoultoj vrednosti) brojeva i kao ilustraciju rešenja tog problema ovde je predstavljen kalkulator koji može da izračuna proizvod 2 velika broja(i za ove brojeve postoji ograničenje koje zavisi od broja cifara proizvoda(koji je manji ili jednak od zbira broja cifara oba broja), međutim ono opet daje "veću slobodu").
+		Paznja: Brojevi treba da budu pozitivni, zbog jednostavnosti primera.
+	</p>
+	<h4>
+		Unesi dva prirodna broja: 
+	</h4>
+	<form action="../ostalo/velikiBrojevi.php" method="get">
+		<textarea name="broj1"></textarea>
+		<textarea name="broj2"></textarea><br>
+		<input type="submit" name="Racunaj" value="Racunaj">
+	</form>
+</body>
+</html>

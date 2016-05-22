@@ -2,15 +2,27 @@ ul{
 	list-style-type: none;
 }
 li{
-	width: 100%;
-	margin :10px;
+	width: 80%;
+	margin :auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
+/*li:hover{
+	background: white;
+}*/
 .vezbe li a{
 	text-decoration: none;
 	color: black;
 	padding: 5px;
+	position: relative;
+	float:left;
+	width: 10%;
 }
-.vezbe li a:hover{
-	background: white;
-	width: 100%;
+.vezbe li p{
+	display: none;
+	padding: 5px;
+	margin: 0px;
+	position: relative;
+	float: left;
+	width: 80%;
 }

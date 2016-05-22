@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Me</title>
+	<style>
+		.listitem {
+			line-height: 25px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>About Me</h1>
+  
+	<ul>
+		<li>Nickname: <span id="nickname"></span></li>
+		<li>Favorites:  <span id="favorites"></span></li>
+		<li>Hometown: <span id="hometown"></span></li>
+	</ul>
+	<script>
+		document.body.style.fontFamily = 'Arial, sans-serif';
+		document.getElementById('nickname').innerHTML = 'Ninja';
+		document.getElementById('favorites').innerHTML = 'Programming, running, swimming';
+		document.getElementById('hometown').innerHTML = 'Leskovac';
+		var items = document.getElementsByTagName('li');
+		for (var i = 0; i < items.length; i++) {
+			items[i].className = 'listitem';
+		}
+    
+		var myPic = document.createElement('img');
+		myPic.src = '../slike/me.png';
+		document.body.appendChild(myPic);
+
+		// Or, with the bonuses:
+		var books = [
+		  {title: 'The Design of EveryDay Things',
+		   img: '../slike/book1.jpg',
+		   author: 'Don Norman',
+		   alreadyRead: false
+		  },
+		  {title: 'The Most Human Human',
+		   img: '../slike/book2.jpg',
+		   author: 'Brian Christian',
+		   alreadyRead: true
+		  }];
+		
+		var bookTitle = document.createElement('p');
+		bookTitle.innerHTML = "Books I Like:";
+		var bookList = document.createElement('ul');
+		for (var i = 0; i < books.length; i++) {
+		  var bookItem = document.createElement('li');
+		  var bookImg = document.createElement('img');
+		  bookImg.src = books[i].img;
+		  bookItem.appendChild(bookImg);
+		  var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+		  bookItem.appendChild(bookDescription);
+		  if (books[i].alreadyRead) {
+			bookItem.style.color = 'grey';
+		  }
+		  bookList.appendChild(bookItem);
+		}
+		document.body.appendChild(bookTitle);	
+		document.body.appendChild(bookList);	
+	</script>
+</body>
+</html>
