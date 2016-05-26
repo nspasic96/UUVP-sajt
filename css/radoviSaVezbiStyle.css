@@ -2,10 +2,8 @@ ul{
 	list-style-type: none;
 }
 li{
-	width: 80%;
-	margin :auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	display: block;
+	margin: 2px;
 }
 /*li:hover{
 	background: white;
@@ -16,13 +14,13 @@ li{
 	padding: 5px;
 	position: relative;
 	float:left;
-	width: 10%;
+	width: 100px;
+	text-align: center;
 }
-.vezbe li p{
-	display: none;
-	padding: 5px;
-	margin: 0px;
+#opisSelektovaneVezbe{
+	width: 100%;
 	position: relative;
-	float: left;
-	width: 80%;
+	float: center;
+	margin: auto;
+	text-align: center;
 }

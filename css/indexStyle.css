@@ -1,5 +1,7 @@
 body{
 	background-image :url("../slike/background.jpg");
+	width: 90%;
+	margin: auto;
 }
 /*nav ul li a:hover{
 	background: transparent;
@@ -26,7 +28,9 @@ nav ul li a{
 	padding-top: 2px; 
 }
 nav ul li {
-	width: 17%;
+	width: 120px;
+	position: relative;
+	float:left;
 	float:left;
 	text-align: center;
 	padding: 0 1%;
@@ -46,15 +50,12 @@ nav ul li {
 	text-align: center;
 	position: fixed;
 	bottom: 0px;
-	width: 100%;
-	margin-left: -9px;
+	width: 90%;
 }
 .contentIndex{
 	width: 90%;
 	margin: 5%;
-	background: #FFCCE5;
 	border-radius: 20px;
 	padding: 5px;
-	box-shadow: 7px 7px;
+	box-shadow: 7px 7px 7px 7px;
 }
-

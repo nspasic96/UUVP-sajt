@@ -1,24 +1,23 @@
 .leftSide{
+	width: 250px;
 	position: relative;
 	float: left;
-	padding: 2%;
-	margin:1%;
 	border-radius: 20px;
-	height: 100%;
 }
 
 .rightSide{
 	position: relative;
 	float: left;
 	width: auto;
-	background: #aaa;
 	border-radius: 20px;
+	width: 55%;
 	padding: 20px;
+	box-shadow: 7px 7px 7px 7px;
 }
 img{
 	position: relative;
-	width: 300px;
-	height: 200px;
+	width: 200px;
+	height: 150px;
 }
 li img{
 	width: 30px;
@@ -30,6 +29,8 @@ ul{
 li{
 	display: inline;
 }
-table{
-	border:solid;
+.content{
+	width: 90%;
+	margin: auto;
+	padding: auto;
 }

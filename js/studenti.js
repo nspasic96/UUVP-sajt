@@ -86,7 +86,7 @@ for(var i=35; i<=88; i++){
 		klasa: "studentslika",
 		fullName: ""
 	};
-	student.fullName="Treba izvući puno ime sa stranice rezultati!";
+	student.fullName="id="+String(student.id);
 	nizStudenata.push(student);
 }
 // function addEvLis(item){

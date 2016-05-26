@@ -1,9 +1,10 @@
 .description{
 	height: 96%;
 	width: 96%;
-	background: green;
-	border-radius: 20px;
 	padding: 2%;
+}
+.description p{
+	opacity: 1;
 }
 .left, .right{
 	position: relative;
@@ -22,14 +23,22 @@ h3{
 	text-align: center;
 }
 .html{
-	background-image :url("../slike/htmlb.png");
+	background-image :url("../slike/stickyNote4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 .css{
-	background-image :url("../slike/css.jpe");
+	background-image :url("../slike/stickyNote4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 .javascript{
-	background-image :url("../slike/javascript.jpe");
+	background-image :url("../slike/stickyNote4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 .php{
-	background-image :url("../slike/php.jpe");
+	background-image :url("../slike/stickyNote4.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }

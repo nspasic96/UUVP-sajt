@@ -23,51 +23,54 @@
 	<div class="content">
 		<ul class="vezbe">
 			<p>Ovde mozete pogledati šta smo radili na vežbama:</p>
-			<li id="1"><a href="vezba1.html">Vežba 1</a><p></p></li></br>
-			<li id="2"><a href="vezba2.html">Vežba 2</a><p></p></li></br>
-			<li id="3"><a href="vezba3.html">Vežba 3</a><p></p></li></br>
-			<li id="4"><a href="vezba4.html">Vežba 4</a><p></p></li></br>
-			<li id="5"><a href="vezba5.html">Vežba 5</a><p></p></li></br>
-			<li id="6"><a href="vezba6.html">Vežba 6</a><p></p></li></br>
-			<li id="7"><a href="vezba7.html">Vežba 7</a><p></p></li></br>
-			<li id="8"><a href="vezba8.html">Vežba 8</a><p></p></li></br>
-			<li id="9"><a href="vezba9.html">Vežba 9</a><p></p></li></br>
-			<li id="10"><a href="vezba10.html">Vežba 10</a><p></p></li></br>
-			<li id="11"><a href="vezba11.html">Vežba 11</a><p></p></li></br>
-			<li id="12"><a href="vezba12.html">Vežba 12</a><p></p></li></br>
-			<li id="13"><a href="vezba13.html">Vežba 13</a><p></p></li></br>
-			<li id="14"><a href="vezba14.html">Vežba 14</a><p></p></li></br>
-			<li id="15"><a href="vezba15.html">Vežba 15</a><p></p></li></br>
-			<li id="16"><a href="vezba16.html">Vežba 16</a><p></p></li>	</br>
-			<li id="18"><a href="vezba18.html">Vežba 18</a><p></p></li>	</br>
-			<li id="19"><a href="vezba19.html">Vežba 19</a><p></p></li>	</br>
-			<li id="20"><a href="vezba20.html">Vežba 20</a><p></p></li>	</br>
-			<li id="21"><a href="vezba21.html">Vežba 21</a><p></p></li>	</br>
-			<li id="22"><a href="vezba22.html">Vežba 22</a><p></p></li>	</br>
-			<li id="23"><a href="vezba23.html">Vežba 23</a><p></p></li>	</br>
-			<li id="24"><a href="vezba24.html">Vežba 24</a><p></p></li>	</br>
-			<li id="25"><a href="vezba25.html">Vežba 25</a><p></p></li>	</br>
-			<li id="26"><a href="vezba26.html">Vežba 26</a><p></p></li>	</br>
-			</br>
-		</ul>
+			<li><a id="1" href="vezba1.html">Vežba 1</a></li>
+			<li><a id="2" href="vezba2.html">Vežba 2</a></li>
+			<li><a id="3" href="vezba3.html">Vežba 3</a></li>
+			<li><a id="4" href="vezba4.html">Vežba 4</a></li>
+			<li><a id="5" href="vezba5.html">Vežba 5</a></li>
+			<li><a id="6" href="vezba6.html">Vežba 6</a></li>
+			<li><a id="7" href="vezba7.html">Vežba 7</a></li>
+			<li><a id="8" href="vezba8.html">Vežba 8</a></li>
+			<li><a id="9" href="vezba9.html">Vežba 9</a></li>
+			<li><a id="10" href="vezba10.html">Vežba 10</a></li>
+			<li><a id="11" href="vezba11.html">Vežba 11</a></li>
+			<li><a id="12" href="vezba12.html">Vežba 12</a></li>
+			<li><a id="13" href="vezba13.html">Vežba 13</a></li>
+			<li><a id="14" href="vezba14.html">Vežba 14</a></li>
+			<li><a id="15" href="vezba15.html">Vežba 15</a></li>
+			<li><a id="16" href="vezba16.html">Vežba 16</a></li>
+			<li><a id="18" href="vezba18.html">Vežba 18</a></li>
+			<li><a id="19" href="vezba19.html">Vežba 19</a></li>
+			<li><a id="20" href="vezba20.html">Vežba 20</a></li>
+			<li><a id="21" href="vezba21.html">Vežba 21</a></li>
+			<li><a id="22" href="vezba22.html">Vežba 22</a></li>
+			<li><a id="23" href="vezba23.html">Vežba 23</a></li>
+			<li><a id="24" href="vezba24.html">Vežba 24</a></li>
+			<li><a id="25" href="vezba25.html">Vežba 25</a></li>
+			<li><a id="26" href="vezba26.html">Vežba 26</a></li>
+		</ul>		
 	</div>
+	<div id="opisSelektovaneVezbe">
+
+		</div>
 	<div class="footer">
 		&#169; 2016 Nikola Spasić. All rights reserved.
 	</div>
 	<script type="text/javascript">
+	var vezbe=[];
 			for(var i=0; i<26; i++){
+				var vezba={
+					opisVezbe: "Opis vezbe broj " + String(i+1) + ". Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+					redniBrojVezbe : i+1
+				};
+				vezbe.push(vezba);
+			}
+
+			for(var i=0; i<26; i++){
+				console.log(vezbe[i].opisVezbe);
 				if(i!=16){
-					var vezbai = document.getElementById(i+1);
-					p = vezbai.getElementsByTagName("p")[0];
-					var tn = document.createTextNode(vezbe[i].opisVezbe);
-					p.appendChild(tn);
-					vezbai.appendChild(p);
-					vezbai.addEventListener("mouseover",function(){
-						this.getElementsByTagName("p")[0].style.display="block";
-					});
-					vezbai.addEventListener("mouseout",function(){
-						this.getElementsByTagName("p")[0].style.display="none";
-					});
+					var a = document.getElementById(String(i+1));
+					a.title = vezbe[i].opisVezbe;					
 				}
 			}
 		</script>

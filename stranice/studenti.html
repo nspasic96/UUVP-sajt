@@ -22,12 +22,12 @@
 	</nav>
 	<div class="content">
 		<div id="studentsContainer">
-                  <h1> Studenti generacije 2015/16 </h1>
                   Koliko slika studenata zelite da vidite odjednom?<br>
                   <div id="chooseNpp">
                   <input type="text" id="npp"></input>
                   <input type="button" id="confirm" value="Potvrdi"></input>
                   </div>
+                  <h1> Studenti generacije 2015/16 </h1>
                   <div id="students"></div>
                   <div id="stranice"></div>  
                   <div id="strelice">
@@ -63,18 +63,7 @@
                               rightArrow.style.display = "none";
                         } else {
                               rightArrow.href="studenti.html?page="+ String(Number(params[0].value)+1) +"&npp="+String(params[1].value);
-                        }
-                        slikeEventi = document.getElementsByClassName('studentslika');
-                        for (var i = 0; i < slikeEventi.length ; i++) {
-                              slikeEventi[i].addEventListener('mouseover',function (){
-                              this.style.width = (100).toString()+"px";
-                              this.style.height = (100).toString()+"px";
-                              });
-                              slikeEventi[i].addEventListener('mouseout',function (){
-                              this.style.width = (50).toString()+"px";
-                              this.style.height = (50).toString()+"px";
-                              });
-                        }                        
+                        }                   
                   </script>
             </div>
             <p>

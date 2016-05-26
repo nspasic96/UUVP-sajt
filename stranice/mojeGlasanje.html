@@ -24,29 +24,83 @@
 	<div id="content">
 		<h1> Glasanje za najbolji sajt </h1>
 		<p>
-			Ova stranica je u pripremi i njena trenutna funkcionalsnost je napravljena za potrebe
-			drugog domaceg zadatka. Trenutno su dodeljeni poeni od 1 do 5 za sajtove drugih studenata
-			kao vrednosti polja u nizu studenata i izlistano trenutno stanje. Kasnije bi trebalo da se omoguci svakom studentu koj poseti ovu stranicu da glasa za sajt koji mu se najvise svidja. Vazno je jos napomenuti da ovo glasanje nema nikakve veze sa pravim glasanjem na serveru za najbolji sajt. Ova stranica je samo za vezbu!
+			Ova stranica je napravljena zbog domaćeg zadatka. Na njoj sam ja već glasao i omogućio sam korisniku da unese svoje glasove za 5, po njegovom mišljenju, najboljih sajtova. Kada pritisne dugme glasaj, korisnikov unos će biti uzet u obzir i računaće se 3 sajta koja su sakupila najveći broj poena i ispod će biti ispisani njihovi autori kao i broj poena koji su ti sajtovi dobili. Međutim, baze podataka nismo radili na predavanjima i nisu planirani da se rade iz ovog premeta pa ti glasovi ne mogu da se pamte i nestaju čim se napusti stranica. Naravno, moguće je glasanje i pri sledećoj poseti. Takođe, moguće je glasati i više puta zato što su potrebne naprednije tehnike u javascriptu pomoću kojih bi se zabranilo glasanje više puta, što nije bila poenta ove vežbe.
 		</p>
+		<div id="ovdeSeGlasa">
+			Prvo mesto:<select id="birajPrvoMesto">
+			  
+			</select></br>
+			Drugo mesto:<select id="birajDrugoMesto">
+			  
+			</select></br>
+			Treće mesto:<select id="birajTreceMesto">
+			 
+			</select></br>
+			Četvrto mesto:<select id="birajCetvrtoMesto">
+			  
+			</select></br>
+			Peto mesto:<select id="birajPetoMesto">
+			  
+			</select></br>
+			<script type="text/javascript">
+				var n1 = document.getElementById("birajPrvoMesto");
+				var n2 = document.getElementById("birajDrugoMesto");
+				var n3 = document.getElementById("birajTreceMesto");
+				var n4 = document.getElementById("birajCetvrtoMesto");
+				var n5 = document.getElementById("birajPetoMesto");
+				for(var i = 0; i<nizStudenata.length; i++){
+					var o1=document.createElement("option");
+					o1.value=nizStudenata[i].id;
+					var ime1=document.createTextNode(nizStudenata[i].fullName);
+					var o2=document.createElement("option");
+					o2.value=nizStudenata[i].id;
+					var ime2=document.createTextNode(nizStudenata[i].fullName);
+					var o3=document.createElement("option");
+					o3.value=nizStudenata[i].id;
+					var ime3=document.createTextNode(nizStudenata[i].fullName);
+					var o4=document.createElement("option");
+					o4.value=nizStudenata[i].id;
+					var ime4=document.createTextNode(nizStudenata[i].fullName);
+					var o5=document.createElement("option");
+					o5.value=nizStudenata[i].id;
+					var ime5=document.createTextNode(nizStudenata[i].fullName);
+					if(i==0){
+						o1.selected="selected";
+					}
+					if(i==1){						
+						o2.selected="selected";
+					}
+					if(i==2){
+						o3.selected="selected";						
+					}
+					if(i==3){
+						o4.selected="selected";
+					}
+					if(i==4){
+						o5.selected="selected";
+					}
+					o1.appendChild(ime1);
+					o2.appendChild(ime2);
+					o3.appendChild(ime3);
+					o4.appendChild(ime4);
+					o5.appendChild(ime5);
+					n1.appendChild(o1);
+					n2.appendChild(o2);
+					n3.appendChild(o3);
+					n4.appendChild(o4);
+					n5.appendChild(o5);
+				}
+			</script></br>
+			<button onclick="raspodeliPrimljeneGlasove()">Glasaj</button>
+		</div></br>
 		<div id="top3">
-			<div id="silver"><h3>Drugo mesto</h3></div>
-			<div id="gold"><h3>Prvo mesto</h3></div>
-			<div id="bronze"><h3>Trece mesto</h3></div>
+			<div id="silver"><h3 id="silverh">Drugo mesto(x poena)</h3></div>
+			<div id="gold"><h3 id="goldh">Prvo mesto(x poena)</h3></div>
+			<div id="bronze"><h3 id="bronzeh">Trece mesto(x poena)</h3></div>
 		</div>
 		<script type="text/javascript">
-			var niz = razdeliGlasoveRandomIVratiBodovaneStudente();
-			prikazi3Najbolja();
-			slikeEventi = document.getElementsByClassName('studentslika');
-            for (var i = 0; i < slikeEventi.length ; i++) {
-                  slikeEventi[i].addEventListener('mouseover',function (){
-                  this.style.width = (100).toString()+"px";
-                  this.style.height = (100).toString()+"px";
-                  });
-                  slikeEventi[i].addEventListener('mouseout',function (){
-                  this.style.width = (50).toString()+"px";
-                  this.style.height = (50).toString()+"px";
-                  });
-            }   
+			var niz = jaGlasam();
+			prikazi3Najbolja(); 
 		</script>
 
 	</div>

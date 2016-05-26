@@ -1,9 +1,6 @@
 p{
-	background-image :url("../slike/velikiBrojevi.jpg"); 
-	background-size: 100% 100%; 
 	width: 80%;
 	margin: auto;
 	padding: 5px;
-	border-radius: 10px;
-	background-repeat: repeat-y;
+	hyphens: auto;
 }

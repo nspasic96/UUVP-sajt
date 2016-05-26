@@ -1,7 +1,6 @@
 .content{
 	width: 90%;
 	margin: 5%;
-	background: yellow;
 	border-radius: 20px;
 	padding: 5px;
 }
@@ -24,7 +23,7 @@ img{
 }
 
 .currentPage{
-	background: blue;
+	background: gray;
 
 }
 #stranice {

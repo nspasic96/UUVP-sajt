@@ -26,3 +26,9 @@ img{
 	width: 100%;
 	position: relative;
 }
+#ovdeSeGlasa{
+	width: 150px;
+	margin: auto;
+	padding: 10px;
+	border: solid;
+}
