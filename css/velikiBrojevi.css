@@ -4,3 +4,9 @@ p{
 	padding: 5px;
 	hyphens: auto;
 }
+#res{
+	width: 80%;
+	padding: 10px;
+	margin: auto;
+	position: relative;
+}

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="velikiBrojvi.css" type="text/css">
 <?php
 	$pisi=false;
-		if($_SERVER['REQUEST_METHOD'] == "GET"){
+		if($_SERVER['REQUEST_METHOD'] == "POST"){
 		if(isset($_GET['broj1'])&&isset($_GET['broj2'])){
 			$br1=$_GET['broj1'];
 			$br2=$_GET['broj2'];
@@ -83,17 +83,17 @@
 	</nav>
 	<p>
 		U računaru brojevi se predstavljaju u binarnom obliku i postoje ograničenja za njihove vrednosti.
-		Na primer, u javascriptu tip broja "Number" može da uzme vrednosti u iz segmenta [5e-324,1.7976931348623157e+308]. Međutim, nekada je potrebno raditi sa mnogo većim(po apsoultoj vrednosti) brojeva i kao ilustraciju rešenja tog problema ovde je predstavljen kalkulator koji može da izračuna proizvod 2 velika broja(i za ove brojeve postoji ograničenje koje zavisi od broja cifara proizvoda(koji je manji ili jednak od zbira broja cifara oba broja), međutim ono opet daje "veću slobodu").
-		Paznja: Brojevi treba da budu pozitivni, zbog jednostavnosti primera.
+		Na primer, u javascriptu tip broja "Number" može da uzme vrednosti iz segmenta [5e-324,1.7976931348623157e+308]. Međutim, nekada je potrebno raditi sa mnogo većim(po apsoultoj vrednosti) brojevima i kao ilustraciju rešenja tog problema ovde je predstavljen kalkulator koji može da izračuna proizvod 2 velika broja(i za ove brojeve postoji ograničenje koje zavisi od broja cifara proizvoda(koji je manji ili jednak od zbira broja cifara oba broja), međutim ono opet daje "veću slobodu").
+		Pažnja: Brojevi treba da budu pozitivni, zbog jednostavnosti primera.
 	</p>
 	<h4>
 		Unesi dva prirodna broja: 
 	</h4>
-	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="get">
+	<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
 		<textarea name="broj1"></textarea>
 		<textarea name="broj2"></textarea><br>
 		<input type="submit" name="Racunaj" value="Racunaj">
 	</form>
-	<?php if($pisi) echo "<p>". $br1 . "*" . $br2 . "=" . $ceoBroj . "</p>"; ?> 
+	<?php if($pisi) echo "<p id='res'>". $br1 . "*" . $br2 . "=" . $ceoBroj . "</p>"; ?> 
 </body>
 </html>
