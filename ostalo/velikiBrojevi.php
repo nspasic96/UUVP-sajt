@@ -1,22 +1,21 @@
-<link rel="stylesheet" href="velikiBrojvi.css" type="text/css">
 <?php
 	$pisi=false;
 		if($_SERVER['REQUEST_METHOD'] == "POST"){
-		if(isset($_GET['broj1'])&&isset($_GET['broj2'])){
-			$br1=$_GET['broj1'];
-			$br2=$_GET['broj2'];
+		if(isset($_POST['broj1'])&&isset($_POST['broj2']) && !empty($_POST['broj1']) && !empty($_POST['broj2'])){
+			$br1=$_POST['broj1'];
+			$br2=$_POST['broj2'];
 			$nizCifara1 = array();
 			$nizCifara2 = array();
 			for($i=strlen($br1)-1; $i>=0; $i--){
 				$nizCifara1[]=(int)$br1[$i];
 				if(!is_numeric($br1[$i])){
-					die();
+					die("Greška pri unosu prvog broja");
 				}
 			}
 			for($i=strlen($br2)-1; $i>=0; $i--){
 				$nizCifara2[]=(int)$br2[$i];
 				if(!is_numeric($br2[$i])){
-					die();
+					die("Greška pri unosu drugog broja");
 				}
 			}
 			$rezObr = array();
@@ -34,11 +33,6 @@
 				$rezObr[$i]=$rezObr[$i]%10;
 			}
 			$rez = array();
-			if($rezObr[strlen($br1)+strlen($br2)]!=0){
-				for($i=strlen($br1)+strlen($br2); $i>=0; $i--){
-					$rez[strlen($br1)+strlen($br2)-$i]=$rezObr[$i];
-				}	
-			}
 			if($rezObr[strlen($br1)+strlen($br2)-1]!=0){
 				for($i=strlen($br1)+strlen($br2)-1; $i>=0; $i--){				
 					$rez[strlen($br1)+strlen($br2)-1-$i]=$rezObr[$i];
@@ -51,7 +45,6 @@
 			}
 			$ceoBroj = implode('',$rez);
 			$pisi=true;
-
 			// for($i=0; $i<=strlen($br1)+strlen($br2); $i++){
 			// 	echo $rezObr[$i];
 			// 	echo "\n";
@@ -66,19 +59,19 @@
 	<meta charset="utf8">
 	<link rel="stylesheet" type="text/css" href="../css/indexStyle.css">
 	<link rel="stylesheet" type="text/css" href="../css/velikiBrojevi.css">
-	<title>Mnozenje velikih brojeva</title>
+	<title>Množenje velikih brojeva</title>
 </head>
 <body>
 	<nav>
 		<ul>
 			<li><a href="../index.html">Početna</a></li>
-			<li><a href="oMeni.html">O meni</a></li>
-			<li><a href="radoviSaVezbi.html">Radovi sa vežbi</a></li>			
-	        <li><a href="studenti.html">Studenti</a></li>
-			<li><a href="http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
-			<li><a href="oPredmetu.html">O predmetu</a></li>
-			<li><a href="mojeGlasanje.html">Glasanje</a></li>
-            <li><a href="kosiHitac.html">Animacija kosog hica</a></li>
+			<li><a href="../stranice/oMeni.html">O meni</a></li>
+			<li><a href="../stranice/radoviSaVezbi.html">Radovi sa vežbi</a></li>			
+	        <li><a href="../stranice/studenti.html">Studenti</a></li>
+			<li><a href="../stranice/http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
+			<li><a href="../stranice/oPredmetu.html">O predmetu</a></li>
+			<li><a href="../stranice/mojeGlasanje.html">Glasanje</a></li>
+            <li><a href="../stranice/kosiHitac.html">Animacija kosog hica</a></li>
 		</ul>
 	</nav>
 	<p>
@@ -94,6 +87,6 @@
 		<textarea name="broj2"></textarea><br>
 		<input type="submit" name="Racunaj" value="Racunaj">
 	</form>
-	<?php if($pisi) echo "<p id='res'>". $br1 . "*" . $br2 . "=" . $ceoBroj . "</p>"; ?> 
+	<?php if($pisi) echo "<p id='res'>". $br1 . " <bold>*</bold> " . $br2 . " <bold>=</bold> " . $ceoBroj . "</p>"; ?> 
 </body>
 </html>
