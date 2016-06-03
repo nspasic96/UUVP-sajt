@@ -89,15 +89,58 @@ for(var i=35; i<=88; i++){
 	student.fullName="id="+String(student.id);
 	nizStudenata.push(student);
 }
-// function addEvLis(item){
-// 	item.addEventListener('mouseover',function (){
-// 	this.style.width = (100).toString()+"px";
-// 	this.style.height = (100).toString()+"px";
-// 	});
-// 	item.addEventListener('mouseout',function (){
-// 	this.style.width = (50).toString()+"px";
-// 	this.style.height = (50).toString()+"px";
-// 	});
-// }
 
-
+nizStudenata[2].fullName="Dušan Ristić";
+nizStudenata[3].fullName="Nikola Spasić";
+nizStudenata[4].fullName="Lazar Stamenković";
+nizStudenata[5].fullName="Miodrag Mikić";
+nizStudenata[6].fullName="Igor Stošić";
+nizStudenata[7].fullName="Petar Petković";
+nizStudenata[8].fullName="Nikola Kostić";
+nizStudenata[9].fullName="Radoica Nikolić";
+nizStudenata[10].fullName="Mihailo Popović";
+nizStudenata[11].fullName="Stefan Jovanović";
+nizStudenata[12].fullName="Sara Stanković";
+nizStudenata[13].fullName="Nikola Golubović";
+nizStudenata[14].fullName="Đorđe Kasagić";
+nizStudenata[15].fullName="Milan Ranđelović";
+nizStudenata[16].fullName="Dragoljub Nikolić";
+nizStudenata[17].fullName="Ivica Tasić";
+nizStudenata[18].fullName="Nikola Živković";
+nizStudenata[19].fullName="Nemanja Jovanović";
+nizStudenata[20].fullName="Miloš Stamenković";
+nizStudenata[21].fullName="Vojin Krtolica";
+nizStudenata[22].fullName="Željko Kostić";
+nizStudenata[23].fullName="Marko Ilić";
+nizStudenata[24].fullName="Nikola Dimitrijević";
+nizStudenata[25].fullName="Danilo Spasov";
+nizStudenata[26].fullName="Zlatomir Paunović";
+nizStudenata[27].fullName="Ana Živojinović";
+nizStudenata[28].fullName="Dušan Ilić";
+nizStudenata[29].fullName="Stefan Ristić";
+nizStudenata[30].fullName="Jovan Pešić";
+nizStudenata[31].fullName="Vladica Stanković";
+nizStudenata[32].fullName="Nikola Jovanović";
+nizStudenata[33].fullName="Miloš Vasić";
+nizStudenata[34].fullName="Vladimir Spasić";
+nizStudenata[35].fullName="Žarko Ristić";
+nizStudenata[36].fullName="Mirolsav Milojković";
+nizStudenata[37].fullName="Katarina Miljković";
+nizStudenata[38].fullName="Nenad Grbić";
+nizStudenata[39].fullName="Pavle Kovačević";
+nizStudenata[40].fullName="Branislav Veličković";
+nizStudenata[41].fullName="Sara Nikolić";
+nizStudenata[42].fullName="Lazar Vujović";
+nizStudenata[43].fullName="Stefan Filipović";
+nizStudenata[44].fullName="Marija Milić";
+nizStudenata[45].fullName="Nenad Radoičić";
+nizStudenata[46].fullName="Nikola Budimir";
+nizStudenata[47].fullName="Ljubiša Jovčić";
+nizStudenata[48].fullName="Nemanja Milutinović";
+nizStudenata[49].fullName="Strahinja Mitić";
+nizStudenata[50].fullName="Andrijana Jovanović";
+nizStudenata[51].fullName="Nikola Antanasković";
+nizStudenata[52].fullName="Miloš Cakić";
+nizStudenata[53].fullName="Nemanja Ivanković";
+nizStudenata[54].fullName="Danijela Pavlović";
+nizStudenata[55].fullName="Nenad Prokić";
