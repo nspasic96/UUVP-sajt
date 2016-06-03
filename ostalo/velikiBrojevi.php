@@ -68,7 +68,7 @@
 			<li><a href="../stranice/oMeni.html">O meni</a></li>
 			<li><a href="../stranice/radoviSaVezbi.html">Radovi sa vežbi</a></li>			
 	        <li><a href="../stranice/studenti.html">Studenti</a></li>
-			<li><a href="../stranice/http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
+			<li><a href="http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
 			<li><a href="../stranice/oPredmetu.html">O predmetu</a></li>
 			<li><a href="../stranice/mojeGlasanje.html">Glasanje</a></li>
 		</ul>
