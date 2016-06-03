@@ -71,7 +71,6 @@
 			<li><a href="../stranice/http://www.pmf.ni.ac.rs">Fakultet</a></a></li>
 			<li><a href="../stranice/oPredmetu.html">O predmetu</a></li>
 			<li><a href="../stranice/mojeGlasanje.html">Glasanje</a></li>
-            <li><a href="../stranice/kosiHitac.html">Animacija kosog hica</a></li>
 		</ul>
 	</nav>
 	<p>
